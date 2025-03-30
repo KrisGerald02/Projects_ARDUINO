@@ -13,7 +13,7 @@ Para ejecutar las prácticas, se requiere:
 
 1. Clona el repositorio:
    ```sh
-   git clone https://github.com/KrisGerald02/Arduino.git
+   git clone https://github.com/KrisGerald02/Proyectos-con-Arduino.git
    ```
 2. Abre la carpeta correspondiente a la práctica que deseas probar.
 3. Carga el código en el Arduino mediante el IDE.
