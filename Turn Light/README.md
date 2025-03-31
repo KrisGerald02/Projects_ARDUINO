@@ -6,3 +6,6 @@ Este proyecto demuestra cómo encender el LED integrado en el pin 13 de un Ardui
 ## Componentes Requeridos
 - Placa Arduino R4 Minima
 - Cable USB para programación y alimentación
+
+## Demostracion
+https://github.com/user-attachments/assets/b1ced398-ff49-4daa-8c39-6516fd0adb1b
