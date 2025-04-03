@@ -21,7 +21,7 @@ This project uses an **Arduino**, a **DHT11 sensor**, and an **LCD display** to 
 4. The LCD will display real-time temperature and humidity readings.  
 
 ## Demonstration  
-https://github.com/user-attachments/assets/a1fcfd14-8372-411e-926a-1884595f3528  
+https://github.com/user-attachments/assets/18dbd389-a5b1-443b-bd70-5ba49b25a3f6
 
 ## 📝 Code  
 ```cpp
