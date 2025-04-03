@@ -95,5 +95,3 @@ void loop() {
   lcd.print(h);
   lcd.print("%");
 }
-
----
