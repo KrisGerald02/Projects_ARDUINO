@@ -13,7 +13,7 @@ To run these practices, you will need:
 
 1. Clone the repository:  
    ```sh
-   git clone https://github.com/KrisGerald02/Proyectos-con-Arduino.git
+   git clone https://github.com/KrisGerald02/Projects_ARDUINO.git
 
    ```
 2. Open the folder corresponding to the practice you want to try.
