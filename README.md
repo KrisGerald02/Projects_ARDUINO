@@ -1,26 +1,25 @@
-# Arduino Practices
+# Arduino Practices  
 
-Este repositorio contiene una colección de prácticas con Arduino, documentando diferentes experimentos y aplicaciones.
+This repository contains a collection of Arduino practices, documenting various experiments and applications.  
 
-## 📌 Requisitos
+## 📌 Requirements  
 
-Para ejecutar las prácticas, se requiere:
-- Placa Arduino (Tres, Mega, Cuatro Minima.)
-- Arduino IDE 
-- Librerías necesarias (indicadas en cada práctica)
+To run these practices, you will need:  
+- Arduino board (Tres, Mega, Cuatro Minima)  
+- Arduino IDE  
+- Required libraries (specified in each practice)  
 
-## 🚀 Cómo usar este repositorio
+## 🚀 How to Use This Repository  
 
-1. Clona el repositorio:
+1. Clone the repository:  
    ```sh
    git clone https://github.com/KrisGerald02/Proyectos-con-Arduino.git
+
    ```
-2. Abre la carpeta correspondiente a la práctica que deseas probar.
-3. Carga el código en el Arduino mediante el IDE.
+2. Open the folder corresponding to the practice you want to try.
+3. Upload the code to the Arduino using the IDE.
 
-## 📜 Licencia
+## 📜 License
+This project is licensed under the MIT License, so you are free to use it with attribution.
 
-Este proyecto está bajo la licencia MIT, por lo que puedes usarlo libremente con atribución.
-
----
-¡Espero que este repositorio te ayude en tu aprendizaje con Arduino! 😊
+I hope this repository helps you in your Arduino learning journey! 😊
