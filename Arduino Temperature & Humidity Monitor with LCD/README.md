@@ -9,9 +9,6 @@ This project uses an **Arduino**, a **DHT11 sensor**, and an **LCD display** to 
 - 16x2 LCD Display with I2C module  
 - Breadboard  
 
-## 🔗 Circuit Diagram  
-(Insert circuit diagram here if available)  
-
 ## ⚡ How to Use  
 1. Connect the **DHT11 sensor** and **LCD display** to the Arduino as per the circuit diagram.  
 2. Install the necessary libraries:  
