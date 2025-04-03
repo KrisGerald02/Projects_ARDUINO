@@ -7,11 +7,21 @@ This project uses an **Arduino**, a **DHT11 sensor**, and an **LCD display** to 
 - Arduino Uno (or compatible board)  
 - DHT11 Temperature & Humidity Sensor  
 - 16x2 LCD Display with I2C module  
-- Jumper Wires  
 - Breadboard  
 
 ## 🔗 Circuit Diagram  
 (Insert circuit diagram here if available)  
+
+## ⚡ How to Use  
+1. Connect the **DHT11 sensor** and **LCD display** to the Arduino as per the circuit diagram.  
+2. Install the necessary libraries:  
+   - `DHT sensor library` by Adafruit  
+   - `LiquidCrystal I2C` library  
+3. Upload the provided code to your Arduino.  
+4. The LCD will display real-time temperature and humidity readings.  
+
+## Demonstration  
+https://github.com/user-attachments/assets/a1fcfd14-8372-411e-926a-1884595f3528  
 
 ## 📝 Code  
 ```cpp
@@ -86,21 +96,4 @@ void loop() {
   lcd.print("%");
 }
 
-## ⚡ How to Use  
-1. Connect the **DHT11 sensor** and **LCD display** to the Arduino as per the circuit diagram.  
-2. Install the necessary libraries:  
-   - `DHT sensor library` by Adafruit  
-   - `LiquidCrystal I2C` library  
-3. Upload the provided code to your Arduino.  
-4. The LCD will display real-time temperature and humidity readings.  
-
-## 📢 Notes  
-- Ensure the **correct I2C address** for your LCD (default is `0x27`, but some modules use `0x3F`).  
-- The DHT11 sensor has a slight delay; readings update every **2 seconds**.  
-
-## 📸 Demo  
-(Add a photo of your working project here)  
-
 ---
-
-Let me know if you need any modifications! 🚀
