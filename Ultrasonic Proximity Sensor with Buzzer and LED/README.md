@@ -10,7 +10,7 @@ This project uses an **Arduino**, an **ultrasonic sensor**, a **buzzer**, and tw
 - 1 HC-SR04 Ultrasonic Sensor
 - 1 Passive Buzzer
 - 1 LED
-- 1 Resistors 
+- 1 Resistor 
 - Jumper wires
 - Breadboard
 - 16x2 LCD Display with I2C module
@@ -44,8 +44,10 @@ Ensure that the **VCC**, **GND**, **SDA**, and **SCL** are correctly connected t
 ## 📷 Demonstration  
 
 ### Video
-[Video 1: Project Demonstration](https://github.com/user-attachments/assets/ea3c9951-1a28-4830-a195-5b68f4c5e07b)  
-[Video 2: Project in Action](https://github.com/user-attachments/assets/aec03b70-1019-45c7-aa3d-2b10a44c811a)
+
+[Video 1: Project Demonstration](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_1)  
+
+[Video 2: Project in Action](https://www.youtube.com/watch?v=YOUR_VIDEO_ID_2)
 
 ### Image
 ![Project Image](https://github.com/user-attachments/assets/c9a0cb3a-f4b2-4a2d-a7f2-9950d79be0f9)
@@ -126,4 +128,3 @@ void loop() {
 
     delay(250);  // Reducir el retardo para mejorar la respuesta
 }
-
