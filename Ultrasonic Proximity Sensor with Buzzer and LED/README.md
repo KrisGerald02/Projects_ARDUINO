@@ -43,9 +43,11 @@ Ensure that the **VCC**, **GND**, **SDA**, and **SCL** are correctly connected t
 
 ## 📷 Demonstration  
 
+### Video
 [Video 1: Project Demonstration](https://github.com/user-attachments/assets/ea3c9951-1a28-4830-a195-5b68f4c5e07b)  
 [Video 2: Project in Action](https://github.com/user-attachments/assets/aec03b70-1019-45c7-aa3d-2b10a44c811a)
 
+### Image
 ![Project Image](https://github.com/user-attachments/assets/c9a0cb3a-f4b2-4a2d-a7f2-9950d79be0f9)
 
 ## 📝 Code
