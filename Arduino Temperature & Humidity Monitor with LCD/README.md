@@ -4,7 +4,7 @@
 This project uses an **Arduino**, a **DHT11 sensor**, and an **LCD display** to monitor temperature and humidity in real-time. The data is displayed on the LCD screen, making it an easy-to-use system for weather monitoring or indoor climate control.  
 
 ## 🛠️ Components Required  
-- Arduino Uno (or compatible board)  
+- Arduino R4 MINIMA
 - DHT11 Temperature & Humidity Sensor  
 - 16x2 LCD Display with I2C module  
 - Breadboard  
