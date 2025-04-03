@@ -6,9 +6,8 @@ This project simulates a flashing traffic light using an **Arduino** and the **R
 
 ## 🛠️ Components Required
 
-- 1 Arduino (UNO, Nano, Mega, etc.)
+- 1 Arduino R4 MINIMA
 - 1 RGB LED KY-016 Module
-- Jumper wires
 - Breadboard
 
 ## 🔗 Circuit Diagram
