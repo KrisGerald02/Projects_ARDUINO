@@ -23,8 +23,8 @@ This project uses an **Arduino** to control the brightness of an LED based on th
 Ensure the potentiometer has one leg connected to **5V**, another to **GND**, and the middle leg to **A0** on the Arduino for the sensor reading.
 
 ## 📷 Demonstration  
-[Demo Video](https://github.com/user-attachments/assets/f424ab64-1817-4234-b7df-ddb81012aca8)  
-![Project Image](https://github.com/user-attachments/assets/d00e1b8b-fd04-44bc-b2d7-47b656c7b5df)
+https://github.com/user-attachments/assets/f424ab64-1817-4234-b7df-ddb81012aca8
+https://github.com/user-attachments/assets/d00e1b8b-fd04-44bc-b2d7-47b656c7b5df
 
 ## 📝 Code
 
