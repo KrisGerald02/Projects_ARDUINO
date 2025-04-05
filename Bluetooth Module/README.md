@@ -13,6 +13,17 @@ This project uses an **Arduino**, involves developing a wireless communication s
 - Serial Bluetooth (Android/PlayStore)
 - IDE Arduino
 
+## 👣 Steps
+- The computer isnt conected to bluetooth
+- Go to Serial Monitor with the command Command + Shift + M
+- Select the options Both NL & CR and 9600 baud
+- Enter the command AT+NAME, AT+NAME+nameofdevice, AT+BAUD
+- Install in Android the software Serial Bluetooth
+- Connect Bluetooth to JDY-31-SPP (password:1234)
+- Connect Bluetooth to namedevice
+- Open Serial terminal, go to Menu/Devices and check if your device is connected
+- Them enter a message in the pc or smartphone
+
 ## ⚡ How to Use  
 1. Connect the **DHT11 sensor** and **LCD display** to the Arduino as per the circuit diagram.  
 2. Install the necessary libraries:  
@@ -27,6 +38,9 @@ This project uses an **Arduino**, involves developing a wireless communication s
 ![Image](https://github.com/user-attachments/assets/0c4ae8a7-318f-4201-ae95-53aec51e8e55)
 ![Image](https://github.com/user-attachments/assets/039912be-8f27-4c29-a480-46ad07e46770)
 ![Image](https://github.com/user-attachments/assets/ca3cc615-10a1-4df9-9270-12d1696057f9)
+
+## + Resources
+https://docs.sunfounder.com/projects/umsk/en/latest/02_arduino/uno_lesson36_bluetooth.html
 
 ## 📝 Code  
 ```cpp
