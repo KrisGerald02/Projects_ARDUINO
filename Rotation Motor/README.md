@@ -1,72 +1,80 @@
-# 🛜 Bluetooth Module
+# 🎛️ Rotation Motor
 
 ## 📌 Project Overview  
-This project uses an **Arduino**, involves developing a wireless communication system that allows controlling a device via Bluetooth technology. The HC-05 Bluetooth module is connected to a development board (such as an Arduino R4 MINIMA), which receives commands from a mobile application developed for Android (Called Serial Bluetooth).
+This project focuses on controlling the rotation direction and speed feedback of a DC motor with encoder using an Arduino R4 MINIMA, a L9110 motor driver, and a TT motor with encoder disk. The motor alternates between clockwise and counterclockwise rotation, while measuring the number of pulses per second from the encoder for feedback.
+
 
 ## 🛠️ Components Required  
 - Arduino R4 MINIMA
 - Jumpers
-- Bluetooth Module
-- Breadboard
-
-## 🛠️ Software Required
-- Serial Bluetooth (Android/PlayStore)
-- IDE Arduino
-
-## 👣 Steps
-- The computer isnt conected to bluetooth
-- Go to Serial Monitor with the command Command + Shift + M
-- Select the options Both NL & CR and 9600 baud
-- Enter the command AT+NAME, AT+NAME+nameofdevice, AT+BAUD
-- Install in Android the software Serial Bluetooth
-- Connect Bluetooth to JDY-31-SPP (password:1234)
-- Connect Bluetooth to namedevice
-- Open Serial terminal, go to Menu/Devices and check if your device is connected
-- Them enter a message in the pc or smartphone
+- L9110
+- TT Motor/Encoder Disk
 
 ## ⚡ How to Use  
 1. Connect the **DHT11 sensor** and **LCD display** to the Arduino as per the circuit diagram.  
 2. Install the necessary libraries:  
-   - `Sotware Serial` by Jueff
+   - `Encoder` by Paul
 3. Upload the provided code to your Arduino.  
 
 ## Circuit with Tintercad
 ![Image](https://github.com/user-attachments/assets/71a8dec8-8860-49fa-914f-ef0dfd7f92d8)
 
 ## 📷 Demonstration  
+![Video](https://github.com/user-attachments/assets/c8c5f09c-f527-4cd4-be84-b745afc836f2)
 ![Image](https://github.com/user-attachments/assets/54e52405-3f65-4a3c-8b37-f1023256f0ed)
 
-## + Resources
-https://docs.sunfounder.com/projects/umsk/en/latest/02_arduino/uno_lesson36_bluetooth.html
 
 ## 📝 Code  
 ```cpp
-/*
-  The code establishes a software serial communication using Arduino’s 
-  SoftwareSerial library, allowing the Arduino to communicate with the 
-  JDY-31 Bluetooth module through its digital pins 3 and 4 (as Rx and Tx). It 
-  checks for data transfer between them, forwarding received messages from one 
-  to the other at a baud rate of 9600. With this code, you can use the 
-  Arduino’s serial monitor to send AT firmware commands to the JDY-31 Bluetooth 
-  module and receive its responses.
-*/
+// Pines del motor
+const int motorA = 9;  // Dirección A
+const int motorB = 10; // Dirección B
 
-// Set up Bluetooth module communication
-#include <SoftwareSerial.h>
-const int bluetoothTx = 3;                           // bluetooth tx to 3 pin
-const int bluetoothRx = 4;                           // bluetooth rx to 4 pin
-SoftwareSerial bleSerial(bluetoothTx, bluetoothRx);  // Declare SoftwareSerial object for Bluetooth communication
+// Encoder (sensor de pulsos)
+const int encoderPin = 3;  // Interrupt 1 en Arduino UNO
+
+volatile int pulsos = 0;  // Pulsos contados del encoder
+
+void contarPulsos() {
+  pulsos++;  // Se llama cada vez que el encoder genera un pulso
+}
 
 void setup() {
+  // Configurar motor
+  pinMode(motorA, OUTPUT);
+  pinMode(motorB, OUTPUT);
+
+  // Configurar encoder
+  pinMode(encoderPin, INPUT_PULLUP);  // Pull-up para evitar ruido
+  attachInterrupt(digitalPinToInterrupt(encoderPin), contarPulsos, RISING);
+
   Serial.begin(9600);
-  bleSerial.begin(9600);
 }
 
 void loop() {
-  if (bleSerial.available()) {
-    Serial.write(bleSerial.read());
-  }
-  if (Serial.available()) {
-    bleSerial.write(Serial.read());
-  }
+  // Mover el motor hacia una dirección
+  // Gira al sentido horario
+  digitalWrite(motorA, HIGH);
+  digitalWrite(motorB, LOW);
+  delay(2000);
+
+  // Gira al sentido antihorario
+  digitalWrite(motorA, LOW);
+  digitalWrite(motorB, HIGH);
+  delay(2000);
+
+
+  // Esperar un segundo para contar pulsos
+  delay(1000);
+
+  // Mostrar cuántos pulsos se detectaron en 1 segundo
+  Serial.print("Pulsos por segundo: ");
+  Serial.println(pulsos);
+
+  // Reiniciar contador
+  pulsos = 0;
+
+  // Si querés parar el motor después de cierto tiempo:
+  // digitalWrite(motorA, LOW);
+  // digitalWrite(motorB, LOW);
 }
