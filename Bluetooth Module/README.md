@@ -20,6 +20,8 @@ This project uses an **Arduino**,
 ![Image](https://github.com/user-attachments/assets/71a8dec8-8860-49fa-914f-ef0dfd7f92d8)
 
 ## 📷 Demonstration  
+![Image](https://github.com/user-attachments/assets/0c4ae8a7-318f-4201-ae95-53aec51e8e55)
+![Image](https://github.com/user-attachments/assets/039912be-8f27-4c29-a480-46ad07e46770)
 ![Image](https://github.com/user-attachments/assets/ca3cc615-10a1-4df9-9270-12d1696057f9)
 
 ## 📝 Code  
