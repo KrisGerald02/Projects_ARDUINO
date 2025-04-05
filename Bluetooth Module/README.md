@@ -29,7 +29,6 @@ This project uses an **Arduino**, involves developing a wireless communication s
 2. Install the necessary libraries:  
    - `Sotware Serial` by Jueff
 3. Upload the provided code to your Arduino.  
-4. The LCD will display real-time temperature and humidity readings.
 
 ## Circuit with Tintercad
 ![Image](https://github.com/user-attachments/assets/71a8dec8-8860-49fa-914f-ef0dfd7f92d8)
