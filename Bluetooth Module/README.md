@@ -1,13 +1,17 @@
 # 🛜 Bluetooth Module
 
 ## 📌 Project Overview  
-This project uses an **Arduino**,  
+This project uses an **Arduino**, involves developing a wireless communication system that allows controlling a device via Bluetooth technology. The HC-05 Bluetooth module is connected to a development board (such as an Arduino R4 MINIMA), which receives commands from a mobile application developed for Android (Called Serial Bluetooth).
 
 ## 🛠️ Components Required  
 - Arduino R4 MINIMA
 - Jumpers
 - Bluetooth Module
-- Breadboard  
+- Breadboard
+
+## 🛠️ Software Required
+- Serial Bluetooth (Android/PlayStore)
+- IDE Arduino
 
 ## ⚡ How to Use  
 1. Connect the **DHT11 sensor** and **LCD display** to the Arduino as per the circuit diagram.  
