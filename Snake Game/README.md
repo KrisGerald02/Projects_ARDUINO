@@ -1,7 +1,7 @@
 # 🐍 Snake Game   
 
 ## 📌 Project Overview  
-This project uses an **Arduino**, a **DHT11 sensor**, and an **LCD display** to monitor temperature and humidity in real-time. The data is displayed on the LCD screen, making it an easy-to-use system for weather monitoring or indoor climate control.  
+This project utilizes an Arduino, Joystick HW-504, and MAX72XX LED Matrix to implement a simple 2D Snake Game. The player controls the snake's direction using a joystick, and the game is displayed on an 8x8 LED matrix. The goal is to eat the apple, grow the snake, and avoid colliding with the snake's own body.
 
 ## 🛠️ Components Required  
 - Arduino R4 MINIMA
