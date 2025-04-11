@@ -6,7 +6,7 @@ This project uses an **Arduino**, involves developing a wireless communication s
 ## 🛠️ Components Required  
 - Arduino R4 MINIMA
 - Jumpers
-- Bluetooth Module
+- Bluetooth Module HC06
 - Breadboard
 
 ## 🛠️ Software Required
