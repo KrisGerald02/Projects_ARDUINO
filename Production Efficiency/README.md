@@ -78,7 +78,7 @@ Este proyecto puede ser simulado en [Tinkercad](https://www.tinkercad.com) usand
 
 ## 🤖 Autor
 
-Desarrollado por [Kristel Geraldine Villalta Porras].
+Desarrollado por Kristel Geraldine Villalta Porras.
 
 ## 📝 Codigo
 ```cpp
