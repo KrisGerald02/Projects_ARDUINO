@@ -16,9 +16,6 @@ This project focuses on controlling the rotation direction and speed feedback of
    - `Encoder` by Paul
 3. Upload the provided code to your Arduino.  
 
-## Circuit with Tintercad
-![Image](https://github.com/user-attachments/assets/71a8dec8-8860-49fa-914f-ef0dfd7f92d8)
-
 ## 📷 Demonstration  
 ![Video](https://github.com/user-attachments/assets/c8c5f09c-f527-4cd4-be84-b745afc836f2)
 ![Image](https://github.com/user-attachments/assets/54e52405-3f65-4a3c-8b37-f1023256f0ed)
