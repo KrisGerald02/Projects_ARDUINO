@@ -30,8 +30,6 @@ This project uses an **Arduino**, involves developing a wireless communication s
    - `Sotware Serial` by Jueff
 3. Upload the provided code to your Arduino.  
 
-## Circuit with Tintercad
-![Image](https://github.com/user-attachments/assets/71a8dec8-8860-49fa-914f-ef0dfd7f92d8)
 
 ## 📷 Demonstration  
 ![Image](https://github.com/user-attachments/assets/0c4ae8a7-318f-4201-ae95-53aec51e8e55)
