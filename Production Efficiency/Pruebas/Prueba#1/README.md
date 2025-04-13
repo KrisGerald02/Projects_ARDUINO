@@ -10,8 +10,10 @@ This project focuses on controlling the rotation direction and speed feedback of
 - L9110
 - TT Motor/Encoder Disk
 
-## 📷 Demonstration  
+## ⚡ Circuit with Fritzing  
 [Image](https://github.com/user-attachments/assets/dac83aa8-3de4-4d3e-a3ef-b8886b0d19ec)
+
+## 📷 Demonstration  
 [Video](https://github.com/user-attachments/assets/f8d6c595-21c3-460c-a490-ec66bcdf8407)
 
 
