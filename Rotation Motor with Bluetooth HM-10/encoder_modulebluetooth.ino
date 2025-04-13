@@ -1,24 +1,3 @@
-# 🎛️ Rotation Motor with B
-
-## 📌 Project Overview  
-This circuit uses a Bluetooth module (HM-10) and a microcontroller to wirelessly control two DC motors with encoder disks. The motors are driven by an H-bridge (L9110s), while encoder signals are read to monitor speed and direction. Ideal for robotics or mobile vehicles with real-time feedback and remote control.
-## 🛠️ Components Required  
-- Arduino R4 MINIMA
-- Jumpers
-- L9110
-- TT Motor/Encoder Disk
-- Bluetooth 4.0 Module HM-10 (iOS & Android)
-
-## ⚡ Circuit with Fritzing  
-![Image](https://github.com/user-attachments/assets/c44bee71-d00e-4a3a-9b27-788e1b1667a4)
-
-## 📷 Demonstration  
-[Video](https://github.com/user-attachments/assets/cf0fef01-a3b1-49c2-8a3e-75476ba32e8e)
-
-
-## 📝 Code  
-```cpp
-/![Image](https://github.com/user-attachments/assets/54e52405-3f65-4a3c-8b37-f1023256f0ed)
 #include <SoftwareSerial.h>
 
 // Pines motores L9110S
