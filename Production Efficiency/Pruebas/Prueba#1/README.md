@@ -11,12 +11,12 @@ This project focuses on controlling the rotation direction and speed feedback of
 - TT Motor/Encoder Disk
 
 ## 📷 Demonstration  
+[Image](https://github.com/user-attachments/assets/dac83aa8-3de4-4d3e-a3ef-b8886b0d19ec)
 [Video](https://github.com/user-attachments/assets/f8d6c595-21c3-460c-a490-ec66bcdf8407)
 
 
 ## 📝 Code  
 ```cpp
-/![Image](https://github.com/user-attachments/assets/54e52405-3f65-4a3c-8b37-f1023256f0ed)
 / Pines motores
 const int motorA_IA = 9;
 const int motorA_IB = 10;
