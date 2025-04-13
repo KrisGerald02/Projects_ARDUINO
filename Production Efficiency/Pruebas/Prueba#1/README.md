@@ -11,7 +11,7 @@ This project focuses on controlling the rotation direction and speed feedback of
 - TT Motor/Encoder Disk
 
 ## 📷 Demonstration  
-![Video](https://github.com/user-attachments/assets/f8d6c595-21c3-460c-a490-ec66bcdf8407)
+[Video](https://github.com/user-attachments/assets/f8d6c595-21c3-460c-a490-ec66bcdf8407)
 
 
 ## 📝 Code  
