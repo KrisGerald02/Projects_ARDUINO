@@ -3,18 +3,11 @@
 ## 📌 Project Overview  
 This project focuses on controlling the rotation direction and speed feedback of a DC motor with encoder using an Arduino R4 MINIMA, a L9110 motor driver, and a TT motor with encoder disk. The motor alternates between clockwise and counterclockwise rotation, while measuring the number of pulses per second from the encoder for feedback.
 
-
 ## 🛠️ Components Required  
 - Arduino R4 MINIMA
 - Jumpers
 - L9110
 - TT Motor/Encoder Disk
-
-## ⚡ How to Use  
-1. Connect the **DHT11 sensor** and **LCD display** to the Arduino as per the circuit diagram.  
-2. Install the necessary libraries:  
-   - `Encoder` by Paul
-3. Upload the provided code to your Arduino.  
 
 ## 📷 Demonstration  
 ![Video](https://github.com/user-attachments/assets/c8c5f09c-f527-4cd4-be84-b745afc836f2)
