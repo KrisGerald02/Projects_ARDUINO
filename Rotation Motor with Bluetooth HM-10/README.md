@@ -1,4 +1,4 @@
-# 🎛️ Rotation Motor with B
+# 🎛️ Rotation Motor with Bluetooth HM-10
 
 ## 📌 Project Overview  
 This circuit uses a Bluetooth module (HM-10) and a microcontroller to wirelessly control two DC motors with encoder disks. The motors are driven by an H-bridge (L9110s), while encoder signals are read to monitor speed and direction. Ideal for robotics or mobile vehicles with real-time feedback and remote control.
