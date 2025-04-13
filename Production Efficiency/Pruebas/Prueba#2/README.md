@@ -9,6 +9,9 @@ This circuit uses a Bluetooth module (HM-10) and a microcontroller to wirelessly
 - TT Motor/Encoder Disk
 - Bluetooth 4.0 Module HM-10 (iOS & Android)
 
+## ⚡ Circuit with Fritzing  
+![Image](https://github.com/user-attachments/assets/c44bee71-d00e-4a3a-9b27-788e1b1667a4)
+
 ## 📷 Demonstration  
 [Video](https://github.com/user-attachments/assets/cf0fef01-a3b1-49c2-8a3e-75476ba32e8e)
 
