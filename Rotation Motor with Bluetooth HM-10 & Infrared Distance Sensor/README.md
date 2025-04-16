@@ -15,7 +15,7 @@ This circuit uses a Bluetooth module (HM-10) and a microcontroller (Arduino R4 M
 ![Image](https://github.com/user-attachments/assets/d8d75307-9241-4991-9913-4cba81a7e21f)
 
 ## 📷 Demonstration  
-[Video](https://github.com/user-attachments/assets/cf0fef01-a3b1-49c2-8a3e-75476ba32e8e)
+[Video](https://github.com/user-attachments/assets/094789ea-9dd0-48c0-bfd1-7745186b18ff)
 
 ## 📝 Code  
 ```cpp
