@@ -67,6 +67,13 @@ Puedes conectar la app **EfiDuino** (desarrollada en Swift) con tu dispositivo m
   - PDF
   - PNG
   - Excel
+ 
+---
+
+## Circuito
+
+
+---
 
 ---
 
