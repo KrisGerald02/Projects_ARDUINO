@@ -38,6 +38,10 @@ Además, he creado una aplicación llamada **EfiDuino**, desarrollada en Swift, 
 | JDY-31 TX            | D4 (Rx Arduino) |
 | JDY-31 RX            | D3 (Tx Arduino) |
 
+Sensor Infrarojo: Amarillo(GND),Negro(-),Rojo(+)
+Bluetooth: Naranja(State),Negro(RXD),Blanco(TXD),Azul(GND),Amarillo(VCC),Rojo(EV)
+LN9110s: B1-A(Azul),B1-B(Morado),GND(Verde),VCC(Gris),A1-A(Naranja),A1-B(Blanco)
+
 ---
 
 ## 🔍 Funcionamiento
