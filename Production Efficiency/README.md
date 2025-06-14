@@ -70,16 +70,8 @@ Puedes conectar la app **EfiDuino** (desarrollada en Swift) con tu dispositivo m
  
 ---
 
-## Circuito
-
-
----
-
----
-
 ## 💻 Simulación
-
-Este proyecto puede ser simulado en [Tinkercad](https://www.tinkercad.com) usando sensores simulados y el Serial Monitor en lugar de Bluetooth.
+![Image](https://github.com/user-attachments/assets/ce328d31-659a-474a-9f0f-b9d3f8a81fb0)
 
 ---
 
