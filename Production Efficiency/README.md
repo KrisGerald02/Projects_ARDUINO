@@ -75,7 +75,7 @@ Puedes conectar la app **EfiDuino** (desarrollada en Swift) con tu dispositivo m
  
 ---
 
-## 💻 Simulación
+## 💻 Simulación del Circuito con Fritzing
 ![Image](https://github.com/user-attachments/assets/ce328d31-659a-474a-9f0f-b9d3f8a81fb0)
 
 ---
