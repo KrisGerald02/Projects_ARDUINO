@@ -63,7 +63,7 @@ Puedes conectar la app **EfiDuino** (desarrollada en Swift) con tu dispositivo m
 
 ## 📱 EfiDuino: App Web
 
-**EfiDuino** es una aplicación desarrollada en Swift que se conecta al sistema de monitoreo de eficiencia a través del módulo Bluetooth HC06. La app permite:
+**EfiDuino** es una aplicación web que se conecta al sistema de monitoreo de eficiencia a través del módulo Bluetooth HC06. La app permite:
 
 - Visualizar las estadísticas de producción por minuto. (El tiempo puede ser modificado).
 - Ver gráficos en tiempo real sobre la eficiencia del proceso.
