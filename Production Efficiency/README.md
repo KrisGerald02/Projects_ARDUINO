@@ -61,7 +61,7 @@ Puedes conectar la app **EfiDuino** (desarrollada en Swift) con tu dispositivo m
 
 ---
 
-## 📱 EfiDuino: App Móvil IOS
+## 📱 EfiDuino: App Web
 
 **EfiDuino** es una aplicación desarrollada en Swift que se conecta al sistema de monitoreo de eficiencia a través del módulo Bluetooth HC06. La app permite:
 
@@ -87,105 +87,136 @@ Desarrollado por Kristel Geraldine Villalta Porras.
 ## 📝 Codigo
 ```cpp
 #include <SoftwareSerial.h>
-// Pines del sensor infrarrojo 
+#include <math.h>
+
+// Pines motores L9110S
+const int motorA_IA = 9;
+const int motorA_IB = 10;
+const int motorB_IA = 5;
+const int motorB_IB = 6;
+
+// Pines Bluetooth JDY-31
+const int bluetoothRx = 4;   // RX del Arduino (conectado a TX del módulo)
+const int bluetoothTx = 11;  // TX del Arduino (conectado a RX del módulo)
+SoftwareSerial bleSerial(bluetoothRx, bluetoothTx); // (RX, TX)
+
+// Sensor IR
 #define sensorIR A0
+
+// Variables de conteo
 int conteo = 0;
 bool objetoDetectado = false;
-// Aqui puedo ajustar el tiempo le puse 60seg
+
+// Tiempo
 unsigned long tiempoInicio;
-const unsigned long duracion = 60000;
+const unsigned long duracion = 15000; // 15 segundos
 bool enEjecucion = true;
 
-//Bluetooth JDY-31
-const int bluetoothTx = 3;
-const int bluetoothRx = 4;
-SoftwareSerial bleSerial(bluetoothTx, bluetoothRx);
+// Meta esperada
+const int cantidadEsperada = 20;
 
-// Encoder
-const int motorA = 9;
-const int motorB = 10;
-const int encoderPin = 2;  // Uso pin 2 para interrumpir
+void detenerMotores() {
+  digitalWrite(motorA_IA, LOW);
+  digitalWrite(motorA_IB, LOW);
+  digitalWrite(motorB_IA, LOW);
+  digitalWrite(motorB_IB, LOW);
+}
 
-volatile int pulsos = 0;
+void iniciarMotores() {
+  digitalWrite(motorA_IA, HIGH);
+  digitalWrite(motorA_IB, LOW);
+  digitalWrite(motorB_IA, HIGH);
+  digitalWrite(motorB_IB, LOW);
+}
 
-void contarPulsos() {
-  pulsos++;
+void reiniciarProceso() {
+  conteo = 0;
+  objetoDetectado = false;
+  tiempoInicio = millis();
+  enEjecucion = true;
+  iniciarMotores();
+
+  Serial.println("\nReinicio solicitado por Bluetooth.");
+  Serial.println("Iniciando nuevo conteo de 15 segundos...");
+  bleSerial.println("\nReinicio solicitado por Bluetooth.");
+  bleSerial.println("Iniciando nuevo conteo de 15 segundos...");
 }
 
 void setup() {
-  // Iniciar serial y bluetooth
   Serial.begin(9600);
   bleSerial.begin(9600);
 
-  // configuro el motor
-  pinMode(motorA, OUTPUT);
-  pinMode(motorB, OUTPUT);
+  pinMode(motorA_IA, OUTPUT);
+  pinMode(motorA_IB, OUTPUT);
+  pinMode(motorB_IA, OUTPUT);
+  pinMode(motorB_IB, OUTPUT);
 
-  // configuro encoder
-  pinMode(encoderPin, INPUT_PULLUP);
-  attachInterrupt(digitalPinToInterrupt(encoderPin), contarPulsos, RISING);
+  iniciarMotores();
 
-  // Iniciar conteo
   tiempoInicio = millis();
-  Serial.println("Iniciando conteo por 1 minuto...");
+
+  Serial.println("Iniciando conteo por 15 segundos...");
+  bleSerial.println("Iniciando conteo por 15 segundos...");
 }
 
 void loop() {
-  // me comunico con el bluetooth
-  if (bleSerial.available()) {
-    Serial.write(bleSerial.read());
-  }
-  if (Serial.available()) {
-    bleSerial.write(Serial.read());
-  }
-
-  // Motor gira en sentido horario
-  digitalWrite(motorA, HIGH);
-  digitalWrite(motorB, LOW);
-
-  // Conteo por sensor infrarrojo
   if (enEjecucion) {
     unsigned long tiempoActual = millis();
 
-    if (tiempoActual - tiempoInicio >= duracion) {
-      enEjecucion = false;
-
-      float eficiencia = (conteo / 20.0) * 100.0;
-
-      Serial.println("\nTiempo finalizado.");
-      Serial.print("Total de productos detectados: ");
-      Serial.println(conteo);
-
-      Serial.print("Eficiencia: ");
-      Serial.print(eficiencia);
-      Serial.println("%");
-
-      return;
-    }
-
+    // Leer sensor IR
     float volts = analogRead(sensorIR) * 0.0048828125;
     int distancia = 13 * pow(volts, -1);
-
-    Serial.print("Distancia: ");
-    Serial.print(distancia);
-    Serial.println(" cm");
 
     if (distancia <= 15) {
       if (!objetoDetectado) {
         conteo++;
         objetoDetectado = true;
+
         Serial.print("Objeto detectado. Total: ");
         Serial.println(conteo);
+        bleSerial.print("Objeto detectado. Total: ");
+        bleSerial.println(conteo);
       }
     } else {
       objetoDetectado = false;
     }
 
-    // Mostrar pulsos por segundo del encoder
-    Serial.print("Pulsos: ");
-    Serial.println(pulsos);
-    pulsos = 0;
+    // Verificar si terminó el tiempo
+    if (tiempoActual - tiempoInicio >= duracion) {
+      enEjecucion = false;
+      detenerMotores();
 
-    delay(200);  // evitar doble conteo y dar tiempo al motor
+      float eficiencia = (conteo / (float)cantidadEsperada) * 100.0;
+
+      Serial.println("\n--- RESULTADOS ---");
+      Serial.print("Productos esperados: ");
+      Serial.println(cantidadEsperada);
+      Serial.print("Productos detectados: ");
+      Serial.println(conteo);
+      Serial.print("Eficiencia: ");
+      Serial.print(eficiencia);
+      Serial.println("%");
+
+      bleSerial.println("\n--- RESULTADOS ---");
+      bleSerial.print("Productos esperados: ");
+      bleSerial.println(cantidadEsperada);
+      bleSerial.print("Productos detectados: ");
+      bleSerial.println(conteo);
+      bleSerial.print("Eficiencia: ");
+      bleSerial.print(eficiencia);
+      bleSerial.println("%");
+
+      bleSerial.println("Envía 'r' para reiniciar.");
+    }
+
+    delay(200); // Para evitar múltiples detecciones
+  }
+
+  // Comando de reinicio desde Bluetooth
+  if (bleSerial.available()) {
+    char comando = bleSerial.read();
+    if (!enEjecucion && comando == 'r') {
+      reiniciarProceso();
+    }
   }
 }
