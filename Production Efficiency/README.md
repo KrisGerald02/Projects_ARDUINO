@@ -18,11 +18,11 @@ Además, he creado una aplicación llamada **EfiDuino**, que se conecta al módu
 
 ## 🧰 Componentes utilizados
 
-- Arduino R4 MINIMA
+- Arduino UNO
 - Sensor infrarrojo (IR)
 - Motor DC con encoder
 - Módulo Bluetooth HC06 (SoftwareSerial)
-- Jumpers y resistencias
+- Jumpers
 - Fuente de alimentación externa 
 
 ---
