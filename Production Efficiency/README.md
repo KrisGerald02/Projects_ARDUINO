@@ -1,8 +1,8 @@
 # 🏭 Production Efficiency Monitor
 
-Este proyecto es un sistema de monitoreo de eficiencia para líneas de producción, utilizando un microcontrolador Arduino. Mide la cantidad de productos detectados en una cinta transportadora durante un período determinado (60 segundos) y calcula la eficiencia del proceso. También registra la velocidad del motor mediante un encoder y se comunica por Bluetooth.
+Este proyecto es un sistema de monitoreo de eficiencia para líneas de producción, utilizando un microcontrolador Arduino. Mide la cantidad de productos detectados en una cinta transportadora durante un período determinado (15 segundos) y calcula la eficiencia del proceso y la envia a la aplicacion web comunicandose por Bluetooth.
 
-Además, he creado una aplicación llamada **EfiDuino**, desarrollada en Swift, que se conecta al módulo Bluetooth del sistema para mostrar las estadísticas en tiempo real, incluyendo gráficos, y permite exportar los resultados a formatos como PDF, PNG y Excel.
+Además, he creado una aplicación llamada **EfiDuino**, que se conecta al módulo Bluetooth del sistema para mostrar las estadísticas en tiempo real, incluyendo gráficos, y permite exportar los resultados a formatos como PDF, PNG y Excel.
 
 ## ⚙️ Características
 
