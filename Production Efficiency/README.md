@@ -23,6 +23,7 @@ Además, he creado una aplicación llamada **EfiDuino**, que se conecta al módu
 - Motor DC con encoder
 - Módulo Bluetooth HC06 (SoftwareSerial)
 - Jumpers
+- Bateria
 - Fuente de alimentación externa 
 
 ---
