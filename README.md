@@ -5,7 +5,7 @@ This repository contains a collection of Arduino practices, documenting various 
 ## 📌 Requirements  
 
 To run these practices, you will need:  
-- Arduino board (Tres, Mega, Cuatro Minima)  
+- Arduino board (UNO, Mega, Cuatro Minima, WIFI)  
 - Arduino IDE  
 - Required libraries (specified in each practice)  
 
