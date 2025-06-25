@@ -59,7 +59,7 @@ Además, he creado una aplicación llamada **EfiDuino**, que se conecta al módu
 
 ## 📡 Comunicación Bluetooth
 
-Puedes conectar la app **EfiDuino** (desarrollada en Swift) con tu dispositivo móvil ios para ver las estadísticas en tiempo real, visualizar gráficos de productividad y exportar los resultados en formato PDF, PNG o Excel.
+Puedes conectar la app **EfiDuino** con tu dispositivo móvil ios para ver las estadísticas en tiempo real, visualizar gráficos de productividad y exportar los resultados en formato PDF, PNG o Excel.
 
 ---
 
