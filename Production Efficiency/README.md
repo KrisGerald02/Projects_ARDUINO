@@ -11,7 +11,7 @@ Además, he creado una aplicación llamada **EfiDuino**, que se conecta al módu
 - ⚡ **Cálculo de eficiencia** en base a una meta de 20 productos por minuto
 - 🔄 **Lectura de velocidad del motor** usando un encoder
 - 📶 **Comunicación Bluetooth** con un módulo HC06 para enviar/recibir datos
-- 📱 **App móvil EfiDuino** desarrollada en Swift para mostrar estadísticas en tiempo real
+- 📱 **App Web EfiDuino** desarrollada en Swift para mostrar estadísticas en tiempo real
 - 🧠 **Simulación posible en Tinkercad**
 
 ---
